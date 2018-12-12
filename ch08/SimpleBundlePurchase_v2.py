@@ -28,6 +28,7 @@ that says the service is unavailable and exit for now.
 
 
 """
+import re 
 
 def DataBundlePurchase (truePassword, balance):
     count=0
@@ -56,15 +57,27 @@ def DataBundlePurchasePhone(balance):
     count=0
     while count < 3:
         phoneNumber = input("Sure, we can give you more data. Please type your phone number first: ")
-        repeatPhoneNumber = input("Better safe than sorry. PLease confirm your phone number: ")
-    
-        if phoneNumber ==  repeatPhoneNumber:
-            print ("Thanks! We can get you that extra data now!")
-            DataBundleChoice(balance)
-            break
-        elif phoneNumber !=  repeatPhoneNumber:
-            print ("Numbers do not match. Please try again")
+        if (isValid(phoneNumber)):  
+            print ("Valid Number")   
+            repeatPhoneNumber = input("Better safe than sorry. Please confirm your phone number: ")
+            if phoneNumber ==  repeatPhoneNumber:
+                print ("Thanks! We can get you that extra data now!")
+                DataBundleChoice(balance)
+                break
+            elif phoneNumber !=  repeatPhoneNumber:
+                    print ("Numbers do not match. Please try again")
+                    count += 1
+        else : 
+            print ("Invalid Number")  
             count += 1
+
+def isValid(phoneNumber): 
+      
+    # 1) Begins with 0
+    # 2) Then contains 7
+    # 3) Then contains 9 digits 
+    Pattern = re.compile("(0)?[7][0-9]{9}") 
+    return Pattern.match(phoneNumber)
     
   
 def DataBundleChoice(balance):
@@ -99,31 +112,36 @@ def DataBundleChoice(balance):
 def topUp(balance):
     count=0
     while count < 3:
-        topUpValue = int(input("How much (in GBPs) would you like to top up? Please give number only. Minimum top up is 5GBP. Multiplies of 5 only please - eg.: 5, 10, 15, 20. "))
+     
+        try: 
+            topUpValue = int(input("How much (in GBPs) would you like to top up? Please give number only. Minimum top up is 5GBP. Multiplies of 5 only please - eg.: 5, 10, 15, 20. "))
+            
         
-        if topUpValue == 0:
-            print("That's ok, see you soon!")
-          
-        elif topUpValue > 1000:
-            print ("That's a little bit too much! No one needs to spend this much on data. Max top up is 1000 GBP" )
-          
-        elif topUpValue < 0:
-            print ("Cannot top up negative GBPs, that would be uncool. Please pick a number between 1 and 1000")
-        
-        elif topUpValue % 5 == 0:
-            balance = balance + int(topUpValue)
-            print("Your current balance is: £" + str(balance))
-            choice(balance)
-            print ('in topup function, after calling choice function')
-            return balance
-       
-        else:
-            print("Incorrect value")
-            count += 1
-         
+            
+            if topUpValue == 0:
+                print("That's ok, see you soon!")
+              
+            elif topUpValue > 1000:
+                print ("That's a little bit too much! No one needs to spend this much on data. Max top up is 1000 GBP" )
+              
+            elif topUpValue < 0:
+                print ("Cannot top up negative GBPs, that would be uncool. Please pick a number between 1 and 1000")
+            
+            elif topUpValue % 5 == 0:
+                balance = balance + int(topUpValue)
+                print("Your current balance is: £" + str(balance))
+                choice(balance)
+                print ('in topup function, after calling choice function')
+                return balance
+           
+            else:
+                print("Incorrect value")
+                count += 1
+        except ValueError:
+            print("Oops!  That was no valid number.  Try again...")
 
-#balance = 5
-#DataBundlePurchase("ilikecats", balance)
+balance = 5
+DataBundlePurchase("ilikecats", balance)
   
 
 
