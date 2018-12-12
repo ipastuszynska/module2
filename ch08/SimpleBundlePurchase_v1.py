@@ -46,24 +46,41 @@ def checkPasscode (truePassword, balance):
     
 
 def dataBundles(balance):
-    dataBundle = input("how much data do you need: (1)I don't need any data (2) 2BG for 5gbp or (3)5GB for 8gbp? Please type 1, 2 or 3.")
+    dataBundle = input("how much data do you need: (1)I don't need any data (2) 2BG for 5gbp or (3)5GB for 8gbp?. (4) I would like to top up first. Please type 1, 2, 3 or 4. ")
     if dataBundle == "1":
-        newBalance = balance
+        balance = balance
         print("That's ok, see you soon!")
         print ("Your current balance is: £" + str(balance))
-        return newBalance
+    if dataBundle == "4":
+        topUp(balance)
+    elif dataBundle =="2" and balance < 5:
+        print ("Looks like you do not have enough credit. Top up and try again")
+        print("Your current balance is: £" + str(balance))
+        topUp(balance)
+    elif dataBundle =="3" and balance < 8:
+        print ("Looks like you do not have enough credit. Top up and try again")
+        print("Your current balance is: £" + str(balance))
+        topUp(balance)
     elif dataBundle == "2":
-        newBalance = balance - 5
-        print("Done! Your current balance is: £" + str(newBalance))
-        return newBalance
+        balance = balance = balance - 5
+        print("Done! Your current balance is: £" + str(balance))
+        return balance
     elif dataBundle == "3":
-        newBalance = balance - 8
-        print("Done! Your current balance is: £" + str(newBalance))
-        return newBalance
+        balance = balance = balance - 8
+        print("Done! Your current balance is: £" + str(balance))
+        return balance
     else:
         print("Value given was incorrect")
-    
-balance = 20
+        
+
+def topUp(balance):
+    topUpValue = input("How much (in GBPs) would you like to top up? Please give number only - eg.: 20. ")
+    balance = balance + int(topUpValue)
+    print("Your current balance is: £" + str(balance))
+    dataBundles(balance)
+    return balance
+
+balance = 5
 checkPasscode("ilikecats", balance)
   
 
