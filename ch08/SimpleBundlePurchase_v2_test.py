@@ -9,22 +9,14 @@ import SimpleBundlePurchase_v2
 
 
 from SimpleBundlePurchase_v2 import DataBundlePurchase
-
+print ("TEST 1")
 DataBundlePurchase("cats", 35)
 
-# Test calls to program:
-#print ('TEST-EXAMPLE 1')
-##database input, you will still need to check user pin
-#result = DataBundlePurchase('ilikecats',34.55)
-#print (result)
+print ("TEST 2")
+DataBundlePurchase("dogs", 5)
 
-#
-#print '---------\nRESULT:', result
-#print '-' * 50, '\n'
-#print 'TEST-EXAMPLE 2'
-#result = DataBundlePurchase('2345',22.00)
-#print '---------\nRESULT:', result
-#print '-' * 50, '\n'
-#print 'TEST-EXAMPLE 3'
-#result = DataBundlePurchase('3456',17.55)
-#print '---------\nRESULT:', result
+print ("TEST 3")
+DataBundlePurchase("6773585", 0)
+
+print ("TEST 4")
+DataBundlePurchase("gj67ssj", 20)
