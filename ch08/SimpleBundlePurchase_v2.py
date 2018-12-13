@@ -123,6 +123,7 @@ def DataBundleChoice(balance):
 # can top up muliplies of 5GBP, >0, <1000
 # 3 chances to get the top up value right 
 # try/except if incorrect value entered
+# once top-up is done, DataBundleChoice function is called again 
         
 def topUp(balance):
     count=0
