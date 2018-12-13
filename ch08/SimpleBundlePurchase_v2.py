@@ -30,6 +30,7 @@ that says the service is unavailable and exit for now.
 """
 import re 
 
+#login - password check, 3 attempts allowed
 def DataBundlePurchase (truePassword, balance):
     count=0
     while count < 3:
@@ -43,9 +44,8 @@ def DataBundlePurchase (truePassword, balance):
         else:
             print("Wrong password, try again!")
             count += 1
-# giv option to either check balance ot buy data     
 
-
+# option to either check balance or to buy data     
 def choice (balance):
     choice = input("If you would like to check your balance - type 1. If you would like to top up your data - type 2." )
     if choice == "1":
@@ -53,13 +53,19 @@ def choice (balance):
     elif choice == "2":
         DataBundlePurchasePhone(balance)
 
+#asks for a phne number
+# calls phone number validation function for UK numbers
+#number to be entered twice - check if matches 
+#total of 3 chances to get the phone number right
+#called if buing data was the choice in the def choice (balance)
+ 
 def DataBundlePurchasePhone(balance):
     count=0
     while count < 3:
         phoneNumber = input("Sure, we can give you more data. Please type your phone number first: ")
         if (isValid(phoneNumber)):  
             print ("Valid Number")   
-            repeatPhoneNumber = input("Better safe than sorry. Please confirm your phone number: ")
+            repeatPhoneNumber = input("Thanks! Better safe than sorry. Please confirm your phone number: ")
             if phoneNumber ==  repeatPhoneNumber:
                 print ("Thanks! We can get you that extra data now!")
                 DataBundleChoice(balance)
@@ -71,6 +77,7 @@ def DataBundlePurchasePhone(balance):
             print ("Invalid Number")  
             count += 1
 
+#phone number validation function for UK numbers
 def isValid(phoneNumber): 
       
     # 1) Begins with 0
@@ -79,7 +86,10 @@ def isValid(phoneNumber):
     Pattern = re.compile("(0)?[7][0-9]{9}") 
     return Pattern.match(phoneNumber)
     
-  
+
+#adding data
+# offers 3 options
+# check if balance exceeds teh price. if not enough funds, calls topUp function 
 def DataBundleChoice(balance):
     
     dataBundle = input("How much data do you need: (1)I don't need any data (2) 2BG for 5gbp or (3)5GB for 8gbp?. Please type 1, 2, 3. ")
@@ -108,7 +118,12 @@ def DataBundleChoice(balance):
     else:
         print("Value given was incorrect")
         
-
+        
+# topUp function, called in DataBundleChoice function if not enough funds 
+# can top up muliplies of 5GBP, >0, <1000
+# 3 chances to get the top up value right 
+# try/except if incorrect value entered
+        
 def topUp(balance):
     count=0
     while count < 3:
