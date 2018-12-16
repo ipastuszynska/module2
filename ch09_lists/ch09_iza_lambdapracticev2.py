@@ -26,7 +26,7 @@ print(sorted(choices, key=lambda s:s[0]))
 
 print()
 
-print("------print(sorted(choices, key=lambda s:s[1][1]))// sorted by cityies within variables ------")
+print("------print(sorted(choices, key=lambda s:s[1][1]))// sorted by cities within variables ------")
 print(sorted(choices, key=lambda s:s[1][1]))
 
 print()
