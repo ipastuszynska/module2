@@ -138,5 +138,7 @@ print()
 print("sorting by city")
 z = sorted(phonebook.items(), key=lambda kv: kv[1][3])
 print(z)
+print()
 print("print(z[0:3])")
 print(z[0:3])
+#remeber, 0:3 gets items 0,1,2 only. it stops at 3 and does not include 3. 
