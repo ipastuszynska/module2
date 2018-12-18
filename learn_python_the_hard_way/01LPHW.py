@@ -4,6 +4,18 @@ Created on Tue Dec  4 15:23:21 2018
 
 @author: 612383386
 """
+#E1 - 10 done online
+
+#----------------
+#E:5  / formating strings
+#----------------
+print("E:5  / formating strings")
+name = "cwaniak"
+animal = "cat"
+age = 6
+
+print(f"{name} is a {animal}. He is {age} years old")
+print()
 
 """LPTH E:11 & E:12 """
 
