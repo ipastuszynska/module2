@@ -25,13 +25,6 @@ Created on Thu Dec 13 09:31:25 2018
 #● Task 6 Using lambda function to sort a list
 #-----------------------------------------------------
 
-#x.append - extending
-#x.remove - removing
-#
-#sorted(x)
-#x.sort -> . will change the object
-#sorted(x)  generates a new list
-#x.sort() changes the original list 
 
 #-----------------------------------------------------
 # TASK 1 - CREATE A LIST
