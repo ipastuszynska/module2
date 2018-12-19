@@ -4,7 +4,9 @@ Created on Thu Nov 29 12:02:49 2018
 
 @author: 612383386
 """
+#-----------------------------------------------------
 #CH2 HOMEWORK 
+#-----------------------------------------------------
 #Create a new Python file with the following statements and run it. Are the results what you expected to see?
 
 a = 1

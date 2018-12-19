@@ -28,8 +28,10 @@ Created on Thu Nov 29 09:34:47 2018
 
 #-----------------------------------------------------
 
-
+#-----------------------------------------------------
 #TASK 1: SIMPLE OPERATIONS 
+#-----------------------------------------------------
+
 print("TASK 1: SIMPLE OPERATIONS")
 A = 6 / 2
 B = 5 / 2
@@ -48,7 +50,9 @@ print (A)
 print (B)
 print()
 
+#-----------------------------------------------------
 #TASK 2: VARIABLE PRACTICE
+#-----------------------------------------------------
 print("TASK 2: VARIABLE PRACTICE")
 age = 5
 age = "almost three"
@@ -61,7 +65,9 @@ print()
 # 'type(age)' in the console will give you the data type 
 
 
+#-----------------------------------------------------
 #TASK 3: BASIC STRING MANIPULATION
+#-----------------------------------------------------
 #Are the answers what you expected to see? / yep
 
 print("TASK 3: BASIC STRING MANIPULATION")
@@ -78,8 +84,9 @@ print("hello" + "\n")
 print(("bob \n" ) *3)  
 #the above line will print bob 3 times, each time in a new line 
 
-
+#-----------------------------------------------------
 # MORE STRING MANIPULATION (int vs string)
+#-----------------------------------------------------
 print("MORE STRING MANIPULATION (int vs string)")
 S1 = 'hello' + 'world'
 S2 = "joke" * 3
@@ -94,8 +101,9 @@ result = int(S1) + int(S2) + S3
 print (result)
 print()
 
-
+#-----------------------------------------------------
 #MORE STRING MANIPULATION (splitting)
+#-----------------------------------------------------
 print("MORE STRING MANIPULATION (splitting)")
 #this will split, save and then print. SplitStr shows as a list
 strExample = 'a,b,c,d,happy'
@@ -107,8 +115,9 @@ print()
 #strExample = 'a,b,c,d,happy'
 #print (strExample.split(','))
 
-
+#-----------------------------------------------------
 #TASK 4: FORMATTING 
+#-----------------------------------------------------
 print("TASK 4: FORMATTING")
 age = 5
 like = "painting"
@@ -123,7 +132,9 @@ print()
 #can put either empty {} or {0} {1} 
 #if we want to change the age, this has to happen before age_description, not after. Python is sequential. 
 
+#-----------------------------------------------------
 #COMMENTS
+#-----------------------------------------------------
 print("COMMENTS")
 """ this is a comment too """
 

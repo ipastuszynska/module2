@@ -26,7 +26,9 @@ Created on Mon Dec  3 15:55:49 2018
 #● Task 1 Input from a user
 #-----------------------------------------------------
 
+#-----------------------------------------------------
 #TASK 2 - FIRST FUNCTION 
+#-----------------------------------------------------
 #print ("TASK 2 - FIRST FUNCTION")
 #Write your first function - write a function that prints your name in the command line, instead of Hello World! Add another line of code so that your function also prints the answer to 2 + 2.
 
@@ -48,8 +50,9 @@ def add_two_numbers (number1, number2):
     answer = number1 + number2
     print("{} plus {} is {}".format(number1, number2, answer))
    
-    
+#-----------------------------------------------------  
 #TASK 4 - RETURN VERSION OF ADD NUMBERS FUNCTION
+#-----------------------------------------------------
 #print ("TASK 4 - RETURN VERSION OF ADD NUMBERS FUNCTION")
     
 def add_two_numbers_and_return_value(number1, number2):
@@ -58,8 +61,9 @@ def add_two_numbers_and_return_value(number1, number2):
     return answer
 
 
-
+#-----------------------------------------------------
 #TASK 5 - CONVERT TEMPERATURE + RETURN 
+#-----------------------------------------------------
 #print("TASK 5- CONVERT TEMPERATURE + RETURN")
 def convert_temperature(C):
     F = C * 9.0 / 5.0 + 32

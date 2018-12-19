@@ -21,8 +21,9 @@ Created on Tue Dec  4 11:40:04 2018
 #● Task 5 ELIF statements
 #-----------------------------------------------------
 
-
+#-----------------------------------------------------
 # TASK 3 & 4 - IF, ELSE
+#-----------------------------------------------------
 print("TASK 3 & 4 - IF, ELSE")
 #Task 3: Write the code below into a new file called numbers.py and run the file.
 #Task 4: Use the code from the last task: Add an if statement that prints a message if you enter a number between 1 and 10. Instead of the if statement you just wrote, now use an else statement to do the same thing. 
@@ -42,7 +43,9 @@ print()
 #A:  '>' not supported between instances of 'str' and 'int'
 
 
+#-----------------------------------------------------
 # TASK 5 - ELIF
+#-----------------------------------------------------
 print("TASK 5 - ELIF")
 #if statements are not related so the computer goes through all of them!  elif is a better way. note that order is important!!!
 

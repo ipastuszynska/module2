@@ -28,25 +28,31 @@ Created on Mon Dec  3 16:03:42 2018
 
 from ch03_iza_functions import*
 
-
+#-----------------------------------------------------
 #TASK 2 - FIRST FUNCTION 
+#-----------------------------------------------------
 print ("TASK 2 FIRST FUNCTION")
 #Write your first function - write a function that prints your name in the command line, instead of Hello World! Add another line of code so that your function also prints the answer to 2 + 2.
 name()
 print()
 
+#-----------------------------------------------------
 #TASK 2 - FIRST FUNCTION - ADD NUMBERS
+#-----------------------------------------------------
 print ("TASK 2 - FIRST FUNCTION - ADD NUMBERS")
 add_two_numbers (7, 12)
 print()
 
-
+#-----------------------------------------------------
 #TASK 4 - RETURN VERSION OF ADD NUMBERS FUNCTION
+#-----------------------------------------------------
 print ("TASK 4 - RETURN VERSION OF ADD NUMBERS FUNCTION")
 add_two_numbers_and_return_value(3, 7)
 print()
 
+#-----------------------------------------------------
 #TASK 5- CONVERT TEMPERATURE + RETURN 
+#-----------------------------------------------------
 print("TASK 5- CONVERT TEMPERATURE + RETURN")
 convert_temperature(21)
 
