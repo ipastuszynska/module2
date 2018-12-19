@@ -4,48 +4,50 @@ Created on Mon Dec  3 16:03:42 2018
 
 @author: 612383386
 """
+#-----------------------------------------------------
+"""Module 2 - Wk 5. - Fundamentals"""
+"""(3) Functions & Importing Modules"""
 
-#from ch03_iza_functions import*
+#KEY LEARNING OUTCOMES 
+#How to get inputs from a user.
+#● What functions are and how to call one
+#● What ‘Arguments;’ are in functions, and how to define them
+#● How to return an ‘ output’ from a function
+#● How to import modules and functions
 
-import ch03_iza_functions
+#DELIVERY REQUIREMENTS
+#One Python file called: ch3file1_[student name]_function.py, which contains the following tasks from the curriculum  
+#● Task 2 First function
+#● Task 4 Return version
+#● Task 5 convert_temperature() -- return version
 
-print('run f1')
-ch03_iza_functions.hello_world_2arg ("love", "mondays")
+#One Python file called: ch3file2_[student name]_test.py <----- IN THIS DOCUMENT !!!
+#Which contains the following tasks from the curriculum
+#● Task 1 Input from a user
+#-----------------------------------------------------
+
+from ch03_iza_functions import*
+
+
+#TASK 2 - FIRST FUNCTION 
+print ("TASK 2 FIRST FUNCTION")
+#Write your first function - write a function that prints your name in the command line, instead of Hello World! Add another line of code so that your function also prints the answer to 2 + 2.
+name()
 print()
 
-print('f2')
-ch03_iza_functions.love_mondays ("I", "love", "mondays", "very much")
+#TASK 2 - FIRST FUNCTION - ADD NUMBERS
+print ("TASK 2 - FIRST FUNCTION - ADD NUMBERS")
+add_two_numbers (7, 12)
 print()
 
-print('f3')
-ch03_iza_functions.add_two_numbers_from_args(7,13)
+
+#TASK 4 - RETURN VERSION OF ADD NUMBERS FUNCTION
+print ("TASK 4 - RETURN VERSION OF ADD NUMBERS FUNCTION")
+add_two_numbers_and_return_value(3, 7)
 print()
 
-print('f4')
-ch03_iza_functions.convert_distance(10)
-print()
+#TASK 5- CONVERT TEMPERATURE + RETURN 
+print("TASK 5- CONVERT TEMPERATURE + RETURN")
+convert_temperature(21)
 
-print('f5')
-ch03_iza_functions.convert_weight_to_kg(6)
-print()
-
-print('f6')
-ch03_iza_functions.convert_temperature_to_F(10)
-print()
-
-print('f7')
-ch03_iza_functions.convert_temperature(10)
-print()
-
-print('f8')
-ch03_iza_functions.add_two_numbers_and_return_value()
-print()
-
-print('f9')
-ch03_iza_functions.conv_distance(15)
-print()
-
-print('f10')
-celsius = float(input("What's the temperature in your city today?"))
-ch03_iza_functions.tempConverter(celsius)
 
