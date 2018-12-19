@@ -41,21 +41,21 @@ Created on Tue Dec 18 09:13:37 2018
 #        
 #        
 #        
-#def examResults():
-#    mark = 1 # need to initialize the mark here and make it true to make it loop 
-#    #user input here will not work as it's out of the loop and will stay the same, will not be updated 
-#    while mark > 0 : 
-#        mark = int(input("what's your mark?"))
-#        if mark >= 80 :
-#            print("well done, you are the best" )
-#        elif mark > 40 :
-#            print ("you passed, just!")
-#        elif mark <= 40 :
-#            print("sorry, you need to take the test again")
-#        else :
-#            print("?")
-#            
-#examResults()
+def examResults():
+    mark = 1 # need to initialize the mark here and make it true to make it loop 
+    #user input here will not work as it's out of the loop and will stay the same, will not be updated 
+    while mark > 0 : 
+        mark = int(input("what's your mark?"))
+        if mark >= 80 :
+            print("well done, you are the best" )
+        elif mark > 40 :
+            print ("you passed, just!")
+        elif mark <= 40 :
+            print("sorry, you need to take the test again")
+        else :
+            print("?")
+            
+examResults()
 
 """early exit"""
 i = 55
