@@ -4,30 +4,32 @@ Created on Tue Dec 11 19:23:34 2018
 
 @author: iza
 """
+"""Module 2 - Wk 6. Design a simple program."""
+"""(8) Mobile Data Bundle Purchase Program"""
 
-#DataBundlePurchase
+#KEY LEARNING OUTCOMES 
+#Create a program which demonstrates the following key learnings:
+#● Validating inputs
+#● Checking a value input against a minimum value requirement
+#● Printing and returning values
+#The demonstration will involve creating a program that replicates buying data bundles using credit already on your phone.
+#This includes the ability to:
+#● Access your phone top up account with a passcode
+#Once logged in, you can:
+#● Check a balance on your phone
+#● Buy a data bundle from the credit you have on your phone
+#During the buying of the data bundle process, this includes the following functions
+#● Verifying the persons phone number
+#● Requests how much you want to top up
+#● Confirming the person has enough in their payment source for the top-up, and if not, reject the transaction
 
-"""
-1.) Log in - verify password
-2.) Show current balance
-3.) Offer data bundles
-4.) Confirm purchase
-5.) Display new balance 
+#DELIVERY REQUIREMENTS
+#One Python file called: SimpleBundlePurchase_v2.py <-----IN THIS DOCUMENT !!!
+#This file should be created in line with the details as described in Chapter 8 Curriculum
+#One updated version of the Python file called: test_DataBundlePurchase.py
+#-----------------------------------------------------
 
 
-
-1.	Ask the user to input their passcode.
-2.	Check whether the passcode value entered matches the true passcode (i.e. the value given in the function call, such as ’1234’ above). If they match, then continue as below,
-otherwise print a suitable message and finish.
-3.	Ask the user to choose their transaction by printing a numbered list of options and reading the value entered by the user.
-4.	If the input is 1 (for credit balance request), print the credit balance information
-and exit.
-5.	If the input is 2 (for purchase data bundle), then (for now) just print a message
-that says the service is unavailable and exit for now.
-6.	If the input is something else, then print a suitable message and exit.
-
-
-"""
 import re 
 
 #login - password check, 3 attempts allowed
@@ -58,7 +60,6 @@ def choice (balance):
 #number to be entered twice - check if matches 
 #total of 3 chances to get the phone number right
 #called if buing data was the choice in the def choice (balance)
- 
 def DataBundlePurchasePhone(balance):
     count=0
     while count < 3:
@@ -123,16 +124,13 @@ def DataBundleChoice(balance):
 # can top up muliplies of 5GBP, >0, <1000
 # 3 chances to get the top up value right 
 # try/except if incorrect value entered
-# once top-up is done, DataBundleChoice function is called again 
-        
+# once top-up is done, DataBundleChoice function is called again  
 def topUp(balance):
     count=0
     while count < 3:
      
         try: 
             topUpValue = int(input("How much (in GBPs) would you like to top up? Please give number only. Minimum top up is 5GBP. Multiplies of 5 only please - eg.: 5, 10, 15, 20. "))
-            
-        
             
             if topUpValue == 0:
                 print("That's ok, see you soon!")
@@ -157,8 +155,8 @@ def topUp(balance):
             print("Oops!  That was not a valid number.  Try again...")
             count += 1
 
-balance = 5
-DataBundlePurchase("ilikecats", balance)
+#balance = 5
+#DataBundlePurchase("ilikecats", balance)
   
 
 
