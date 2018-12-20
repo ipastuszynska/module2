@@ -60,8 +60,6 @@ print()
 
 #-----------------------------------------------------
 #TASK 3 - LOOK UP AND DELETE VALUES
-#TASK 4 - RETRIEVING KEYS AND VALUES
-#TASK 5 - CONVERT KEYS AND VALUES TO LISTS
 #-----------------------------------------------------
 # Try to create a dictionary of your own, to store the last-3-digits of the phone numbers of 3 classmates."""
 
@@ -108,6 +106,18 @@ print(x)
 y = list(phonebook.values())
 print (y)
 
+print()
+
+#-----------------------------------------------------
+#TASK 4 - RETRIEVING KEYS AND VALUES
+#TASK 5 - CONVERT KEYS AND VALUES TO LISTS
+#-----------------------------------------------------
+print("TASK 4 - RETRIEVING KEYS AND VALUES")
+tel = { 'alf':111, 'bobby':222, 'calvin':333 }
+x = tel.keys() # get list of keys (non-standard)
+print(x)
+y = tel.values()
+print(y)
 print()
 
 
@@ -253,7 +263,7 @@ print()
 
 
 #Create a phoneBook_dict which contains 4 classmates’ info as below:
-{Name: (last-3-digit phoneNo., LuckyNo., PostCode, Town/city)}
+#{Name: (last-3-digit phoneNo., LuckyNo., PostCode, Town/city)}
 print("phonebook dictionary excercise")
 
 phonebook = {"Kate": (777, 7, "SE1 2DE", "London"), "Joanna": (453, 13, "CM5 2DE", "Willingale"), "Gabi": (345, 99, "DE1 2SE", "Brighton"), "Helen": (928, 1, "RF1 2PE", "Honolulu")}

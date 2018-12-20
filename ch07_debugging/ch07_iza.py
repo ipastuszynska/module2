@@ -51,3 +51,15 @@ result2 = nestedOperation()
 
 print(result2)
 
+#------------------------------------------------------
+#BUTTONS
+#------------------------------------------------------
+
+#The first (play)  button runs code until the break point.
+
+#The second button runs code line-by-line until the breakpoint.
+
+#The third one is for stepping into the sections (class and functions). The fourth is for you to step out when 
+#The fourth button goes to the next breakpoint 
+
+#The last (stop), button exits debugging mode

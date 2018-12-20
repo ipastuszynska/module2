@@ -39,6 +39,7 @@ if number == 7:
 else:
     print("good job!")
 print()
+#the last two will be paired up 
 #Q: What happens if you remove the line with number = int(number)?
 #A:  '>' not supported between instances of 'str' and 'int'
 
