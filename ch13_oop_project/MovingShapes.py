@@ -9,14 +9,20 @@ from Shapes import *
 from pylab import random as r
 
 class MovingShape:
-    def __init__(self,frame,shape,diameter):
+    def __init__(self, frame,shape,diameter):
+        self.x = 0
+        self.y = 0
+        self.dx = 10
+        self.dy = 10
         self.shape = shape
         self.diameter = diameter
         self.figure = Shape(shape,diameter)
     def goto(self,x,y):
         self.figure.goto(x,y)
     def moveTick(self):
-        pass
+        self.x += self.dx
+        self.y += self.dy
+        self.goto(self.x, self.y)
     
 class Square(MovingShape):
     def __init__(self,frame,diameter):
@@ -29,3 +35,4 @@ class Diamond(MovingShape):
 class Circle(MovingShape):
     def __init__(self,frame,diameter):
         MovingShape.__init__(self,frame,'circle',diameter)
+        
