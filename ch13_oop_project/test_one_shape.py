@@ -4,6 +4,8 @@ Created on Thu Jan  3 20:50:14 2019
 
 @author: iza
 """
+#07/04 
+
 from MovingShapes import *
 frame = Frame()
 shape1 = Square(frame,100)
