@@ -19,4 +19,6 @@ for i in range(numshapes):
 for i in range(100):
     for shape in shapes:
         shape.moveTick()
+
+frame.close()
 turtle.done()
