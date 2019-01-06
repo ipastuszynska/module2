@@ -40,7 +40,6 @@ class MovingShape:
         self.figure.goto(x,y)
     
     def moveTick(self): 
-        
         if self.x<=self.minx or self.x>=self.maxx: #07/09
             self.dx=-self.dx #07/09
         if self.y<=self.miny or self.y>=self.maxy:#07/09
@@ -49,16 +48,7 @@ class MovingShape:
         self.x += self.dx #07/05
         self.y += self.dy #07/05
         self.goto(self.x, self.y) #07/05  
-           
-        
-#    def moveTick(self):
-#        
-#        
-#        self.x += self.dx #07/05
-#        self.y += self.dy #07/05
-#        self.goto(self.x, self.y) #07/05   
-#        
-#       
+                
 class Square(MovingShape):
     def __init__(self,frame,diameter):
         MovingShape.__init__(self,frame,'square',diameter)
@@ -66,6 +56,14 @@ class Square(MovingShape):
 class Diamond(MovingShape):
     def __init__(self,frame,diameter):
         MovingShape.__init__(self,frame,'diamond',diameter)
+        diameter = 2* diameter 
+        self.minx = diameter/2  #07/9
+        self.miny = diameter/2  #07/9
+        self.maxx = frame.width - diameter/2 #07/9
+        self.maxy = frame.height- diameter/2 #07/9
+        self.x = self.minx + r() * (self.maxx - self.minx) #07/9
+        self.y = self.miny + r() * (self.maxy - self.miny) #07/9
+        self.goto(self.x, self.y) 
 
 class Circle(MovingShape):
     def __init__(self,frame,diameter):
