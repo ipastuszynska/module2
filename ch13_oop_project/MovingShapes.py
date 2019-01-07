@@ -20,8 +20,8 @@ class MovingShape:
         return(self.x, self.y, self.dx, self.dy)
         
     def startingPoint (self, diameter, fwidth, fheight):
-        self.minx = 0 + diameter/2  #07/05, 07/08
-        self.miny =  0 + diameter/2  #07/05 #07/8
+        self.minx = diameter/2  #07/05, 07/08
+        self.miny =  diameter/2  #07/05 #07/8
         self.maxx = fwidth - diameter/2 #07/8
         self.maxy = fheight - diameter/2 #07/8
         self.x = self.minx + r() * (self.maxx - self.minx) #07/8
@@ -56,11 +56,10 @@ class Square(MovingShape):
 class Diamond(MovingShape):
     def __init__(self,frame,diameter):
         MovingShape.__init__(self,frame,'diamond',diameter)
-        diameter = 2* diameter 
-        self.minx = diameter/2  #07/9
-        self.miny = diameter/2  #07/9
-        self.maxx = frame.width - diameter/2 #07/9
-        self.maxy = frame.height- diameter/2 #07/9
+        self.minx = diameter #07/9
+        self.miny = diameter #07/9
+        self.maxx = frame.width - diameter #07/9
+        self.maxy = frame.height- diameter #07/9
         self.x = self.minx + r() * (self.maxx - self.minx) #07/9
         self.y = self.miny + r() * (self.maxy - self.miny) #07/9
         self.goto(self.x, self.y) 
